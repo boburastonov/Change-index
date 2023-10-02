@@ -33,6 +33,7 @@ body {
   padding: 30px 25px;
   margin: 6rem auto;
   background-color: var(--container-bg);
+  border-radius: 5px;
 }
 
 .container__form {
@@ -41,7 +42,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-top: 0px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 #numberInput {
@@ -75,7 +76,7 @@ body {
 .btn {
   border: 0;
   border-radius: 3px;
-  padding: 18px 30px;
+  padding: 18px 20px;
   color: var(--btn-color);
   background-color: var(--btn-bg);
   font-size: 23px;
@@ -89,7 +90,7 @@ body {
   padding: 0;
   margin: 0;
   margin-right: auto;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .number-type__item{
@@ -102,6 +103,10 @@ body {
 
 .number-type__item:not(:last-child){
   margin-right: 12px;
+}
+
+.number-type__item--active{
+  color: var(--type-active-color);
 }
 
 .container__text{
