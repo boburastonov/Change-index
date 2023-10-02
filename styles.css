@@ -1,16 +1,16 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
 
-:root{
-    --container-bg: #FCFCFC;
-    --btn-color: #19171E;
-    --btn-bg: #ECECEC;
-    --placeholder-color: #707274;
-    --input-border: #D6D6D6;
-    --input-border-active: #242424;
-    --type-color: #C1C1C1;
-    --type-active-color: #21221F;
-    --text-color: #000002;
-    --body-bg: #1e6da8;
+:root {
+  --container-bg: #fcfcfc;
+  --btn-color: #19171e;
+  --btn-bg: #ececec;
+  --placeholder-color: #707274;
+  --input-border: #d6d6d6;
+  --input-border-active: #242424;
+  --type-color: #c1c1c1;
+  --type-active-color: #21221f;
+  --text-color: #000002;
+  --body-bg: #1e6da8;
 }
 
 * {
@@ -23,4 +23,91 @@ body {
   color: var(--text-color);
   background-color: var(--body-bg);
   font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 800px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 25px;
+  margin: 6rem auto;
+  background-color: var(--container-bg);
+}
+
+.container__form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+#numberInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 73%;
+  padding-top: 7px;
+  padding-bottom: 18px;
+  margin-top: 15px;
+  border: 0;
+  border-bottom: 3px solid var(--input-border);
+  color: var(--input-border-active);
+  background-color: transparent;
+  margin-right: 10px;
+  font-size: 20px;
+  outline: none;
+}
+
+#numberInput::placeholder {
+  font-size: 18px;
+}
+
+#numberInput[type="number"]::-webkit-inner-spin-button,
+#numberInput[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  opacity: 1;
+  padding: 15px 0px;
+}
+
+.btn {
+  border: 0;
+  border-radius: 3px;
+  padding: 18px 30px;
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
+  font-size: 23px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.number-type__list{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.number-type__item{
+  color: var(--type-color);
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.number-type__item:not(:last-child){
+  margin-right: 12px;
+}
+
+.container__text{
+  margin: 0;
+  margin-right: auto;
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 600;
 }
