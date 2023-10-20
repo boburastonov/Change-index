@@ -5,7 +5,7 @@ const listItem = document.querySelector(".number-type__list");
 const text = document.querySelector(".container__text");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  e.stopPropagation();
   if ((input.value = 1)) {
     text.innerHTML = `${listItem.children[0].innerHTML} content`;
     listItem.children[0].classList.add("number-type__item--active");
